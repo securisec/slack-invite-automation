@@ -10,8 +10,8 @@ html
     #wrapper
       .main
         .header
-          h1
-            strong #{community}
+          //- h1
+          //-   strong #{community}
           h2 #{__('HEADER', community)}
         .content
           .information
@@ -22,8 +22,11 @@ html
               input(type="submit", value="Join").submit
               if !!recaptchaSiteKey
                 div(class="g-recaptcha", data-sitekey=recaptchaSiteKey)
+            img(class="count" src="https://securisecslack.herokuapp.com/badge.svg?colorA=EB586F&colorB=1e1c4d")
+  canvas(class="cbg")
     if !!recaptchaSiteKey
        script(src='https://www.google.com/recaptcha/api.js')
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js")
     script.
       var tokenRequired = #{tokenRequired};
       var form = document.getElementById('join-form');
@@ -41,3 +44,13 @@ html
           evt.preventDefault();
         }
       });
+    script.
+      window.onload = function() {
+        Particles.init({
+          selector: '.cbg',
+          //- color: ['#DA0463', '#404B69', '#DBEDF3'],
+          color: ['#1e1c4d' ,'EB586F'],
+          connectParticles: true,
+          maxParticles: 120
+        });
+      };
