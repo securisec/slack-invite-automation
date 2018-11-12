@@ -9,9 +9,9 @@ html
   body
     #wrapper
       .main
+        source(src="https://static.airtable.com/js/embed/embed_snippet_v1.js")
+        iframe(class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrQ7JLFvtWSVIUVK?backgroundColor=teal" frameborder="0" onmousewheel="" width="100%" height="1351" style="background: transparent; border: 1px solid #ccc;")
         .header
           h1
             strong #{community}
           h2(class=isFailed?'error':'') !{message}
-        source(src="https://static.airtable.com/js/embed/embed_snippet_v1.js")
-        iframe(class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrQ7JLFvtWSVIUVK?backgroundColor=teal" frameborder="0" onmousewheel="" width="100%" height="1351" style="background: transparent; border: 1px solid #ccc;")
