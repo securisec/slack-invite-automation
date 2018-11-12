@@ -32,7 +32,7 @@ router.post('/invite', function(req, res) {
           if (err) { return res.send('Error:' + err); }
           body = JSON.parse(body);
           if (body.ok) {
-            res.render('result', {
+            res.render('success', {
               community: config.community,
               message: 'Success! Check &ldquo;'+ req.body.email +'&rdquo; for an invite from Slack.'
             });
