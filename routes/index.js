@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const express = require('express');
 const router = express.Router();
 const request = require('request');
@@ -32,10 +34,11 @@ router.post('/invite', function(req, res) {
           if (err) { return res.send('Error:' + err); }
           body = JSON.parse(body);
           if (body.ok) {
-            res.render('success', {
-              community: config.community,
-              message: 'Success! Check &ldquo;'+ req.body.email +'&rdquo; for an invite from Slack.'
-            });
+            // res.render('success', {
+            //   community: config.community,
+            //   message: 'Success! Check &ldquo;'+ req.body.email +'&rdquo; for an invite from Slack.'
+            // });
+            res.redirect('https://securisecctf.typeform.com/to/lXU8Lc');
           } else {
             let error = body.error;
             if (error === 'already_invited' || error === 'already_in_team') {
