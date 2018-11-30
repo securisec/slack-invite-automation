@@ -38,7 +38,8 @@ router.post('/invite', function(req, res) {
             //   community: config.community,
             //   message: 'Success! Check &ldquo;'+ req.body.email +'&rdquo; for an invite from Slack.'
             // });
-            res.redirect('https://securisecctf.typeform.com/to/lXU8Lc');
+            // res.redirect('https://securisecctf.typeform.com/to/lXU8Lc');
+            res.redirect('https://airtable.com/shrQ7JLFvtWSVIUVK');
           } else {
             let error = body.error;
             if (error === 'already_invited' || error === 'already_in_team') {
