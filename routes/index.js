@@ -95,6 +95,10 @@ router.post('/invite', function(req, res) {
       errMsg.push('your email is required');
     }
 
+    if (req.body.email.includes('securisec.com')) {
+      errMsg.push('Use a valid email address')
+    }
+
     if (!!config.inviteToken) {
       if (!req.body.token) {
         errMsg.push('valid token is required');
