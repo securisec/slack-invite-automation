@@ -91,7 +91,7 @@ router.post('/invite', function(req, res) {
     }
   } else {
     const errMsg = [];
-    if (!req.body.email || req.body.email.includes('securisec.com')) {
+    if (!req.body.email) {
       errMsg.push('your email is required');
     }
 
